@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TL-01 Mariane Bouchard</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/app.js" defer></script>
+</head>
+<!--16 fonctionnalité css3 dont xFilter et 6 forme géométrique fait avec transform qui compte pour une 
+fonctionnalité chacune >> s'inspirer de https://www.quackit.com/css/css3/#google_vignette -->
+
+<body>
+    <header class="nav_default">
+        <div class="titre">
+            <h1>CSS3 de A à Z</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#a">a</a></li>
+                <li><a href="#b">b</a></li>
+                <li><a href="#c">c</a></li>
+                <li><a href="#d">d</a></li>
+                <li><a href="#e">e</a></li>
+                <li><a href="#f">f</a></li>
+                <li><a href="#g">g</a></li>
+                <li><a href="#h">h</a></li>
+                <li><a href="#i">i</a></li>
+                <li><a href="#j">j</a></li>
+                <li><a href="#k">k</a></li>
+                <li><a href="#l">l</a></li>
+                <li><a href="#m">m</a></li>
+                <li><a href="#n">n</a></li>
+                <li><a href="#o">o</a></li>
+                <li><a href="#p">p</a></li>
+                <li><a href="#q">q</a></li>
+                <li><a href="#r">r</a></li>
+                <li><a href="#s">s</a></li>
+                <li><a href="#t">t</a></li>
+                <li><a href="#u">u</a></li>
+                <li><a href="#v">v</a></li>
+                <li><a href="#w">w</a></li>
+                <li><a href="#x">x</a></li>
+                <li><a href="#y">y</a></li>
+                <li><a href="#z">z</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="a">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>a</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Cette section est vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre A</p>
+                </div>
+            </div>
+        </section>
+        <section id="b">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>b</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Border Radius</h2>
+                    <p class="description">
+                        Cette propriété permet d’arrondir les coins d’un élément. Elle
+                        accepte jusqu’à quatre valeurs, qui correspondent aux coins dans
+                        l’ordre : haut gauche, haut droit, bas droit et bas gauche, un seul paramètre arrondiras tout
+                        les coin égaux.
+                    </p>
+                    <h3>Exemple d'utilisation</h3>
+                    <div class="use">
+                        <h4>Code</h4>
+                        <pre class="code">
+.borderradius{
+border-radius: 10px 20px 30px 40px;
+height: 50px;
+width: 50px;
+background-color:#561CD4;
+};
+                </pre>
+                        <h5>Résultat</h5>
+                        <div class="borderradius">
+
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius">MDN - border radius</a>
+                    </div>
+                </div>
+                <div class="fieldset">
+                    <h2>Box-Shadow</h2>
+                    <p class="description">La propriété box-Shadow permet d'ajouter une ombre à un élément. Elle est
+                        utilisée pour créer des effets de profondeur
+                        et de dimensionnalité, en simulant une source de lumière qui projette une ombre derrière
+                        l'élément.</p>
+                    <h3>Exemple d'utilisation</h3>
+                    <div class="use">
+                        <h4>Code</h4>
+                        <pre class="code">
+.boxshadow{
+border-radius: 10px;
+height: 50px;
+width: 50px;
+background-color:#561CD4;
+box-shadow: 10px 10px 5px grey;
+}
+                    </pre>
+                        <h5>Résultat</h5>
+                        <div class="boxshadow">
+
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow">MDN - Box-Shadow</a>
+                    </div>
+
+                </div>
+                <div class="fieldset">
+                    <h2>Border image</h2>
+                    <p class="description">
+                        La propriété CSS border-image permet de définir une image comme bordure d'un élément. Elle offre
+                        une manière flexible et graphique d'appliquer des bordures, allant au-delà des styles de bordure
+                        traditionnels (solide, pointillé, etc.).
+                    </p>
+                    <h3>Exemple d'utilisation</h3>
+                    <div class="use">
+                        <h4>Code</h4>
+                        <pre class="code">
+.borderimage {
+    border: 20px solid transparent;
+    padding: 15px;
+    border-image: url(/assets/img/bg_borderimage.jpg) 30 stretch;
+}
+                            
+                    </pre>
+                        <h5>Résultat</h5>
+                        <div class="borderimage">
+
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius">MDN - border radius</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section id="c">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>c</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Columns count</h2>
+                    <p class="description"> La propriété column-count définit le nombre de colonnes dans lesquelles le
+                        contenu d'un élément doit être divisé. En utilisant cette propriété, le texte et les autres
+                        éléments enfants sont automatiquement répartis sur le nombre de colonnes spécifié.</p>
+                        <h3>Exemple d'utilisation</h3>
+                    <div class="use">
+                        <h4>Code</h4>
+                        <pre class="code">
+.columns{
+    column-count: 3;
+    column-gap: 20px;
+}
+                        </pre>
+                        <h5>Résultat</h5>
+                        <div class="columns">
+                            <p>"Les étoiles nous guident à travers les ténèbres de la nuit, révélant les secrets cachés
+                                dans les profondeurs de notre âme. Comme les constellations qui illuminent le ciel, nos
+                                vies sont interconnectées par des fils invisibles du destin. Chaque mouvement des astres
+                                est une danse cosmique qui nous rappelle l'interconnexion de l'univers. Embrassez votre
+                                signe zodiacal, car il est le miroir de votre essence profonde, une carte céleste de
+                                votre voyage terrestre. La sagesse de l'astrologie réside dans la compréhension que nous
+                                sommes tous des étoiles en formation, des fragments du cosmos cherchant à briller dans
+                                notre propre lumière.</p>
+
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/columns">MDN - Columns</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="d">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>d</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre D</p>
+                </div>
+            </div>
+        </section>
+        <section id="e">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>e</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre E</p>
+                </div>
+
+            </div>
+        </section>
+        <section id="f">
+            <header class="container">
+                <img class="" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>f</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Filter</h2>
+                    <p class="description"> la propriété filter est utilisée pour appliquer des effets visuels à un
+                        élément HTML et à son contenu. Cette propriété permet de modifier l'apparence visuelle des
+                        éléments, tels que les images ou les arrière-plans, en utilisant divers filtres prédéfinis.</p>
+                    <h3>Exemple d'utilisation</h3>
+                    <div class="use">
+                        <h4>Code</h4>
+                        <pre class="code">
+.filter1{
+filter: blur(2px);
+}
+.filter2{
+    filter: brightness(225%);
+}
+.filter3{
+    filter: contrast(200%);
+}
+.filter4{
+    filter: opacity(50%);
+}
+                    </pre>
+                        <h5>Résultat</h5>
+                        <div class="filter">
+                            <span>Filter 1</span>
+                            <span>filter 2</span>
+                            <span>filter 3</span>
+                            <span>filter 4</span>
+                            <img class="style filter1" src="./assets/img/filter.jpg" alt="visuelle du filter x">
+                            <img class="style filter2" src="./assets/img/filter1.jpg" alt="">
+                            <img class="style filter3" src="./assets/img/filter2.jpg" alt="">
+                            <img class="style filter4" src="./assets/img/filter3.jpg" alt="">
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_filter_effects">MDN - Filter
+                            Effect</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="g">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>g</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre G</p>
+                </div>
+
+            </div>
+        </section>
+        <section id="h">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>h</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre H</p>
+                </div>
+            </div>
+        </section>
+        <section id="i">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>i</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre I</p>
+                </div>
+
+            </div>
+        </section>
+        <section id="j">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>j</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre J</p>
+                </div>
+
+            </div>
+        </section>
+        <section id="k">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>k</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Keyframe</h2>
+                    <p class="description"> Permet de créer des animations complexes. Par exemple, l’animation suivante
+                        fait changer la couleur de fond d’un élément de orange à rose, puis à vert en 4 secondes en
+                        boucle.
+                    <div class="use">
+                        <h3>Exemple d'utilisation</h3>
+                        <h4>Code</h4>
+                        <pre class="code">
+@keyframes colorchange {
+     0%   {background-color: rgb(255, 81, 0);}
+     50%  {background-color: rgb(255, 0, 191);}
+     100% {background-color: rgb(193, 231, 22);}
+}
+                            
+.keyframe{
+    animation: colorchange 4s infinite;
+    height: 100px;
+    width: 100px;
+}
+                            
+
+
+                    </pre>
+                        <h5>Résultat</h5>
+                        <div class="keyframe">
+
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/transform">MDN - transform</a>
+                    </div>
+                </div>
+                <div class="fieldset">
+                    <h2>Animation</h2>
+                </div>
+            </div>
+        </section>
+        <section id="l">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>l</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre L</p>
+                </div>
+            </div>
+        </section>
+        <section id="m">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>m</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre M</p>
+                </div>
+            </div>
+        </section>
+        <section id="n">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>n</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre N</p>
+                </div>
+            </div>
+        </section>
+        <section id="o">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>o</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre O</p>
+                </div>
+
+            </div>
+        </section>
+        <section id="p">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>p</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre P</p>
+                </div>
+            </div>
+        </section>
+        <section id="q">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>q</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre Q</p>
+                </div>
+            </div>
+        </section>
+        <section id="r">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>r</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre R</p>
+                </div>
+            </div>
+        </section>
+        <section id="s">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>s</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Selecteur first-child</h2>
+                    <p class="description"> Les sélecteurs avancés permettent de cibler des éléments spécifiques de
+                        manière plus précise..</p>
+                    <div class="use">
+                        <h3>Exemple d'utilisation</h3>
+                        <h4>Code</h4>
+                        <pre class="code">
+.selecteur :first-child {
+    color: blue;
+    font-size: 1rem;
+}
+.selecteur :last-child {
+    color: orange;
+    font-size: 1.5rem;
+    }
+                    </pre>
+                        <h5>Résultat</h5>
+                        <div class="selecteur">
+                            <p>je suis une balise p le premier enfant de la balise div contenant la class selecteur</p>
+                            <p>je suis une balise p le dernier enfant de la balise div contenant la class selecteur</p>
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/:first-child">MDN - Slecteur
+                            first-child</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="t">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>t</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>transform</h2>
+                    <p class="description"> La propriété transform en CSS permet de changer la façon dont les éléments
+                        sont affichés à l'écran. On peut les déplacer, les faire tourner, les agrandir ou les rétrécir,
+                        voire même les déformer pour donner l'illusion de perspective.</h3>
+                    <div class="use">
+                        <h4>Code</h4>
+                        <pre class="code">
+.square {
+background-color: #3498db;
+}
+
+.rectangle {
+background-color: #e74c3c;
+transform: scaleX(1.5);
+}
+.diamond {
+background-color: #2ecc71;
+transform: rotate(45deg);
+}
+
+.triangle {
+width: 0;
+height: 0;
+border-left: 50px solid transparent;
+border-right: 50px solid transparent;
+border-bottom: 100px solid #9b59b6;
+transform: rotate(180deg); 
+}
+.parallelogram {
+background-color: #f1c40f;
+transform: skew(20deg);
+}
+.hexagon {
+width: 58px; 
+height: 100px;
+background-color: #e67e22;
+position: relative;
+margin: 50px;
+}
+.hexagon:before,
+.hexagon:after {
+content: "";
+position: absolute;
+width: 0;
+border-left: 29px solid transparent;
+border-right: 29px solid transparent;
+}
+.hexagon:before {
+bottom: 100%;
+border-bottom: 50px solid #e67e22;
+}
+.hexagon:after {
+top: 100%;
+width: 0;
+border-top: 50px solid #e67e22;
+}
+                    </pre>
+                        <h5>Résultat</h5>
+                        <div class="transform">
+                            <span>Carre</span>
+                            <span>Rectangle</span>
+                            <span>Diamond</span>
+                            <div class="shape square"></div>
+                            <div class="shape rectangle"></div>
+                            <div class="shape diamond"></div>
+                            <span>Triangle</span>
+                            <span>Parallelogram</span>
+                            <span>Hexagon</span>
+                            <div class="shape triangle"></div>
+                            <div class="shape parallelogram"></div>
+                            <div class="shape hexagon"></div>
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/transform">MDN - transform</a>
+                    </div>
+                </div>
+                <div class="fieldset">
+                    <h2>Text shadow</h2>
+                    <p class="description"> Permet d’ajouter des ombres au texte. Dans l'exemple ci-dessous ajoute une
+                        ombre noire qui est décalée de 2px vers la droite et 2px vers le bas du
+                        texte, et qui a un flou de 4px.</h3>
+                    <div class="use">
+                        <h4>Code</h4>
+                        <pre class="code">
+p {
+    text-shadow: 4px 4px 2px #3498db;
+}
+                    </pre>
+                        <h5>Résultat</h5>
+                        <div class="text-shadow">
+                            <p>je suis du text-shadow</p>
+                            <p>je suis du text sans text-shadow</p>
+
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/text-shadow">MDN - text-shadow</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="u">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>u</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre U</p>
+                </div>
+            </div>
+        </section>
+        <section id="v">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>v</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre V</p>
+                </div>
+            </div>
+        </section>
+        <section id="w">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>w</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre W</p>
+                </div>
+            </div>
+        </section>
+        <section id="x">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>x</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre X</p>
+                </div>
+            </div>
+        </section>
+        <section id="y">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>y</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre y</p>
+                </div>
+            </div>
+        </section>
+        <section id="z">
+            <header class="container">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <button>z</button>
+            </header>
+            <div class="content">
+                <div class="fieldset">
+                    <h2>Section vide</h2>
+                    <p>Aucune porpiété présenter pour la lettre z</p>
+                </div>
+            </div>
+            <button class="btn_retour none">Retour</button>
+    </main>
+    <footer>
+        <p>Mariane Bouchard</p>
+        <p>Date<time datetime="2024-05-23">23 Mai 2024</time></p>
+        <p>Production en Médias Interactifs</p>
+
+    </footer>
+</body>
+
+</html>

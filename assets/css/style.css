@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: .6rem;
+    font-family: "Kufam", sans-serif;
+}
+
+body {
+    background: url(/assets/img/texture-bg-white.jpg) center/cover fixed;
+}
+
+
+/* header  */ 
+.titre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    background-color: #F7EDE2;
+    color: #561CD4;
+
+}
+
+ul {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(13, 1fr);
+    gap: .5rem;
+
+}
+
+
+li {
+    list-style: none;
+
+}
+
+li a {
+    text-decoration: none;
+    color: #561CD4;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+/* scroll */
+
+
+.navScroll {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: #F7EDE2;
+    padding: 0 1rem;
+    z-index: 1;
+
+}
+
+.nav_default {
+    position: fixed;
+    width: 100%;
+}
+
+
+/* container de contenue */
+
+main {
+    padding-top: 180px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.container {
+    border-bottom: .2rem solid #561CD4;
+    padding:2rem;
+    display: flex;
+    gap: 1rem;
+    color: orangered;
+    font-size: 2rem;
+    cursor: pointer;
+
+}
+
+.content {
+    background-color: #fff;
+    display: none;
+}
+
+
+.visiblecontent {
+    display: block;
+    height: fit-content;
+    background-color: #fff;
+}
+
+.container button {
+    color: orangered;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.container:hover {
+    background-color: #561CD4;
+}
+
+/* L'intérieur du contenue */
+.fieldset{
+    border: none;
+    padding: 2rem;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+    min-height: 150px;
+    border-radius: 1.5rem;
+    margin-bottom: 40px;
+}
+
+h2{
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 1.4rem;
+}
+
+h3{
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 1.4rem;
+}
+
+h4, h5, h6 {
+    font-size: 1rem;
+}
+
+.use{
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.code{
+
+    background-color: gray;
+   color: #F7EDE2;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.description{
+    padding: 2rem;
+}
+
+
+
+
+
+/* exemple d'utilisation */
+.borderradius{
+    border-radius: 10px 20px 30px 40px;
+    height: 50px;
+    width: 50px;
+    background-color:#561CD4;
+}
+
+.boxshadow{
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    background-color:#561CD4;
+    box-shadow: 10px 10px 5px grey;
+}
+
+/*border image*/
+.borderimage {
+    border: 20px solid transparent;
+    padding: 15px;
+    border-image: url(/assets/img/bg_borderimage.jpg) 30 stretch;
+}
+/* keyframe*/ 
+
+@keyframes colorchange {
+    0%   {background-color: rgb(255, 81, 0);}
+    50%  {background-color: rgb(255, 0, 191);}
+    100% {background-color: rgb(193, 231, 22);}
+}
+
+
+.keyframe{
+    animation: colorchange 4s infinite;
+    height: 100px;
+    width: 100px;
+}
+
+/*columns*/
+.columns{
+    column-count: 3;
+    column-gap: 20px;
+
+}
+
+/* filter */
+.filter{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 10%, 90%;
+    gap: .5rem;
+}
+
+.style{
+    height: 200px;
+}
+
+.filter1{
+    filter: blur(2px);
+}
+.filter2{
+    filter: brightness(225%);
+}
+
+.filter3{
+    filter: contrast(200%);
+}
+.filter4{
+    filter: opacity(50%);
+}
+
+/* transform */ 
+.transform {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10%, 45% 45%;
+}
+
+.shape {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.square {
+    background-color: #3498db;
+}
+
+.rectangle {
+    background-color: #e74c3c;
+    transform: scaleX(1.5);
+}
+
+.diamond {
+    background-color: #2ecc71;
+    transform: rotate(45deg);
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #9b59b6;
+    transform: rotate(180deg); 
+}
+
+.parallelogram {
+    background-color: #f1c40f;
+    transform: skew(20deg);
+}
+
+.hexagon {
+    width: 58px; 
+    height: 100px;
+    background-color: #e67e22;
+    position: relative;
+    margin: 50px;
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 29px solid transparent;
+    border-right: 29px solid transparent;
+}
+
+.hexagon:before {
+    bottom: 100%;
+    border-bottom: 50px solid #e67e22;
+}
+
+.hexagon:after {
+    top: 100%;
+    width: 0;
+    border-top: 50px solid #e67e22;
+}
+
+/*text-shadow*/
+.text-shadow :first-child{
+    text-shadow: 4px 4px 2px #3498db;
+    padding-bottom: .5rem;
+}
+
+
+/* selecteur*/
+.selecteur :first-child {
+    color: blue;
+    font-size: 1rem;
+    }
+    .selecteur :last-child {
+        color: orange;
+        font-size: 1.5rem;
+        }
+
+ /* boutton retour vers en haut*/
+ .btn_retour{
+    background-color:  #561CD4;
+    color: #F7EDE2;
+    cursor: pointer;
+    font-family: "Kufam", sans-serif;
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    bottom: 100px;
+    right: 10px;
+    padding: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+.btn_retour:hover, :focus {
+    background-color: orangered;
+}
+
+ .none {
+    display: none;
+ }
+
+footer {
+    height: 100px;
+    background-color: #F7EDE2;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+
+/* tablette et ordinateur */
+
+@media screen and (min-width:768px) {
+    :root{
+        font-size: .8rem;
+    }
+    .navScroll{
+        padding: 0 3rem;
+
+    
+    }
+    ul {
+        width: fit-content;
+    }
+
+    li {
+        font-size: 1.4rem;
+        background-color: #F7EDE2;
+        width: 25px;
+        height: 25px;
+        border-radius: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+}
