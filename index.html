@@ -160,7 +160,7 @@ box-shadow: 10px 10px 5px grey;
                     <p class="description"> La propriété column-count définit le nombre de colonnes dans lesquelles le
                         contenu d'un élément doit être divisé. En utilisant cette propriété, le texte et les autres
                         éléments enfants sont automatiquement répartis sur le nombre de colonnes spécifié.</p>
-                        <h3>Exemple d'utilisation</h3>
+                    <h3>Exemple d'utilisation</h3>
                     <div class="use">
                         <h4>Code</h4>
                         <pre class="code">
@@ -558,8 +558,9 @@ border-top: 50px solid #e67e22;
                 <div class="fieldset">
                     <h2>Text shadow</h2>
                     <p class="description"> Permet d’ajouter des ombres au texte. Dans l'exemple ci-dessous ajoute une
-                        ombre noire qui est décalée de 2px vers la droite et 2px vers le bas du
-                        texte, et qui a un flou de 4px.</h3>
+                        ombre mauve qui est décalée de 2px vers la droite et 2px vers le bas du
+                        texte, et qui a un flou de 4px.</p>
+                    <h3>Exemple d'utilisation</h3>
                     <div class="use">
                         <h4>Code</h4>
                         <pre class="code">
@@ -575,6 +576,79 @@ p {
                         </div>
                         <h6>Source</h6>
                         <a href="https://developer.mozilla.org/fr/docs/Web/CSS/text-shadow">MDN - text-shadow</a>
+                    </div>
+                </div>
+                <div class="fieldset">
+                    <h2>Transitions</h2>
+                    <p class="description"> Les transitions permettent de contrôler la vitesse de changement d’une
+                        propriété CSS. Par exemple, transition: width 2s; change la largeur de l’élément sur une période
+                        de 2 secondes lors du survol. Nous pouvons spécifier sur qu'elle éléments comme dans cette
+                        exemple le width ou l'appliquer sur tous avec all</p>
+                    <h3>Exemple d'utilisation</h3>
+                    <div class="use">
+                        <h4>Code</h4>
+                        <pre class="code">
+.transition1 {
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+    transition: width 2s;
+}
+.transition1:hover{
+    width: 150px;
+}
+.transition2 {
+    width: 100px;
+    height: 100px;
+    background-color:#561CD4;
+    transition: transform 2s;
+}
+.transition2:hover {
+    transform: rotate(180deg);
+background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+                    </pre>
+                        <h5>Résultat</h5>
+                        <span>transition 1</span>
+                        <div class="transition1">
+                            <p>survol moi</p>
+                        </div>
+                        <span>transition 2</span>
+                        <div class="transition2">
+                            <p>survol moi</p>
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions">MDN
+                            - transition</a>
+                    </div>
+                </div>
+                <div class="fieldset">
+                    <h2>Text décoration</h2>
+                    <p class="description">La propriété text-decoration est utilisée pour ajouter des décorations au
+                        texte, telles que des lignes sous, au-dessus ou à travers le texte. Elle est une propriété
+                        abrégée qui permet de configurer simultanément text-decoration-line, text-decoration-color, et
+                        text-decoration-style.</p>
+                    <h3>Exemple d'utilisation</h3>
+                    <div class="use">
+                        <h4>Code</h4>
+                        <pre class="code">
+.text-decoration :first-child {
+    text-decoration: underline dotted red;
+    font-size: 1.4rem;
+}
+.text-decoration :last-child{
+    text-decoration: line-through wavy blue;
+    font-size: 1.4rem;
+}
+                    </pre>
+                        <h5>Résultat</h5>
+                        <div class="text-decoration">
+                            <p>j'ai un text decoration qui rend mon text souligné avec une ligne en pointillés rouge</p>
+                            <p>J'ai un text deceration qui rend mon text barré avec une ligne ondulée bleue.</p>
+
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/text-decoration">MDN - text-decoration</a>
                     </div>
                 </div>
             </div>
@@ -654,7 +728,7 @@ p {
     </main>
     <footer>
         <p>Mariane Bouchard</p>
-        <p>Date<time datetime="2024-05-23">23 Mai 2024</time></p>
+        <p>Date: <time datetime="2024-05-23">23 Mai 2024</time></p>
         <p>Production en Médias Interactifs</p>
 
     </footer>

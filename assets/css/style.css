@@ -320,6 +320,60 @@ h4, h5, h6 {
     padding-bottom: .5rem;
 }
 
+/*transition*/
+
+.transition1 {
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+    transition: width 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white ;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.transition1:hover {
+    width: 150px;
+}
+.transition2 {
+    width: 100px;
+    height: 100px;
+    background-color:#561CD4;
+    transition: transform 2s;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #F7EDE2;
+}
+.transition2:hover {
+    transform: rotate(180deg);
+background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+color: black;
+}
+.transition2 :first-child {
+    transition: transform 2s;
+    text-align:center ;
+    padding: 10px;
+    height: 80px;
+    width: 80px;
+}
+.transition2 :first-child:hover {
+    transform: rotate(180deg);
+}
+/*text-decoration*/
+
+.text-decoration :first-child {
+    text-decoration: underline dotted red;
+    font-size: 1.4rem;
+}
+.text-decoration :last-child{
+    text-decoration: line-through wavy blue;
+    font-size: 1.4rem;
+}
 
 /* selecteur*/
 .selecteur :first-child {
