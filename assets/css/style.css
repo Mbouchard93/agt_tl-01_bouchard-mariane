@@ -99,6 +99,7 @@ main {
     color: orangered;
     font-size: 2rem;
     cursor: pointer;
+    transition: box-shadow 0.5s ease;
 
 }
 
@@ -123,8 +124,9 @@ main {
     font-size: 2rem;
     cursor: pointer;
 }
-.container:hover {
-    background-color: #561CD4;
+.container:hover, .container:focus {
+    box-shadow: 10px 10px 20px #561cd42d;
+    
 }
 
 /* L'intérieur du contenue */
@@ -176,6 +178,47 @@ h4, h5, h6 {
 
 
 /* exemple d'utilisation */
+/*animation timing*/
+@keyframes rotateAndScale {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(0.5); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.animation_timing1 {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, orange, orangered);
+    animation-name: rotateAndScale;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+
+ @keyframes bounce {
+    0% { transform: scale(1,1) translateY(0); }
+    50% { transform: scale(1.1, 0.9) translateY(0); }
+    70% { transform: scale(0.9, 1.1) translateY(-100px); }
+    100% { transform: scale(1,1) translateY(0); }
+}
+
+.animation_timing2 {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, #561CD4, #7D3C98);
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+    animation-iteration-count: infinite;
+}
+
+.animation_timing{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .borderradius{
     border-radius: 10px 20px 30px 40px;
     height: 50px;
@@ -243,6 +286,20 @@ h4, h5, h6 {
 }
 .filter4{
     filter: opacity(50%);
+}
+
+
+/*overflow*/
+.overflow {
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid black;
+}
+
+.overflow :first-child {
+    height: 300px;
+    width: auto;
 }
 
 /* transform */ 
@@ -375,6 +432,78 @@ color: black;
     font-size: 1.4rem;
 }
 
+/*mix-blend-mode*/
+.mix-blend-mode {
+    position: relative;
+    height: 200px;
+    background: url('/assets/img/mix-blend-mode.jpg') center/cover no-repeat ;
+}
+.mix-blend-mode :first-child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.8rem;
+    color: whitesmoke;
+    mix-blend-mode:difference;
+}
+/*grid */
+
+.grid{
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+    grid-template-areas:
+    'grid1 grid1 grid1'
+    'grid2 grid3 grid4'
+    'grid5 grid6 grid6';
+    height: 500px; 
+    width: 350px; 
+    border: 1px solid #561CD4;
+}
+
+.grid :first-child{
+    background-color: #fbc2eb;
+    grid-area: grid1;
+}
+.grid :nth-child(2){
+    background-color: #d8c2fb;
+    grid-area: grid2;
+}
+.grid :nth-child(3){
+    background-color: #fbc2c2;
+    grid-area: grid3;
+}
+.grid :nth-child(4){
+    background-color: #dafbc2;
+    grid-area: grid4;
+}
+.grid :nth-child(5){
+    background-color: #95a1e9;
+    grid-area: grid5;
+}
+.grid :last-child{
+    background-color: #82d3a0;
+    grid-area: grid6;
+}
+
+/*flex*/
+.flex {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 275px;
+    width: 275px;
+    background-color: black;
+}
+
+.flex :first-child {
+padding: 4REM;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
 /* selecteur*/
 .selecteur :first-child {
     color: blue;
@@ -402,9 +531,10 @@ color: black;
     justify-content: center;
     align-items: center;
  }
-.btn_retour:hover, :focus {
-    background-color: orangered;
-}
+ .btn_retour:focus,
+ .btn_retour:hover {
+     background-color: orangered;
+ }
 
  .none {
     display: none;
