@@ -55,10 +55,61 @@ fonctionnalité chacune >> s'inspirer de https://www.quackit.com/css/css3/#googl
             </header>
             <div class="content">
                 <div class="fieldset">
-                    <h2>Cette section est vide</h2>
-                    <p>Aucune porpiété présenter pour la lettre A</p>
+                    <h2>Animation-timing-function </h2>
+                    <p class="description">
+                        Elle spécifie comment une animation progresse au fil du temps. Par exemple, l’animation peut
+                        accélérer, ralentir, ou même rebondir à certains moments j'ai rajouter a l'exemple
+                        animation-iteration-count: infinite; pour qu'on puisse bien voir l'animation.
+                    </p>
+                    <h3>Exemple d'utilisation</h3>
+                    <div class="use">
+                        <h4>Code</h4>
+                        <pre class="code">
+@keyframes rotateAndScale {
+    0% { transform: rotate(0deg) scale(1); }
+     50% { transform: rotate(180deg) scale(0.5); }
+     100% { transform: rotate(360deg) scale(1); }
+}
+                            
+.animation_timing1 {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, orange, orangered);
+    animation-name: rotateAndScale;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+                      
+@keyframes bounce {
+    0% { transform: scale(1,1) translateY(0); }
+    50% { transform: scale(1.1, 0.9) translateY(0); }
+    70% { transform: scale(0.9, 1.1) translateY(-100px); }
+    100% { transform: scale(1,1) translateY(0); }
+}
+                         
+.animation_timing2 {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, #561CD4, #7D3C98);
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+    animation-iteration-count: infinite;
+}
+</pre>
+                        <h5>Résultat</h5>
+                        <div class="animation_timing">
+                            <div class="animation_timing1"></div>
+                            <div class="animation_timing2"></div>
+                            <span>Timing 1</span>
+                            <span>Timing 2</span>
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/animation-timing-function">MDN - Timing
+                            function</a>
+                    </div>
                 </div>
-            </div>
         </section>
         <section id="b">
             <header class="container">
@@ -214,7 +265,7 @@ box-shadow: 10px 10px 5px grey;
         </section>
         <section id="f">
             <header class="container">
-                <img class="" src="./assets/img/arrow_right.svg" aria-hidden="true">
+                <img class="arrow" src="./assets/img/arrow_right.svg" aria-hidden="true">
                 <button>f</button>
             </header>
             <div class="content">
@@ -256,6 +307,43 @@ filter: blur(2px);
                             Effect</a>
                     </div>
                 </div>
+                <div class="fieldset">
+                    <h2>Flex</h2>
+                    <p class="description"> La propriété display: flex permet de créer un conteneur flexible pour
+                        organiser facilement les éléments enfants. En utilisant display: flex, tu peux aligner et
+                        distribuer les éléments horizontalement ou verticalement avec beaucoup de flexibilité. C'est
+                        super utile pour créer des mises en page réactives et adaptatives.</p>
+                    <h3>Exemple d'utilisation</h3>
+                    <div class="use">
+                        <h4>Code</h4>
+                        <pre class="code">
+.flex {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 275px;
+    width: 275px;
+    background-color: black;
+}
+                            
+.flex :first-child {
+    padding: 4REM;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+                        </pre>
+                        <h5>Résultat</h5>
+                        <div class="flex">
+                            <div class="enfant">
+                                Je suis centrer
+                            </div>
+
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/flex">MDN - Flex</a>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="g">
@@ -265,8 +353,67 @@ filter: blur(2px);
             </header>
             <div class="content">
                 <div class="fieldset">
-                    <h2>Section vide</h2>
-                    <p>Aucune porpiété présenter pour la lettre G</p>
+                    <h2>Grid</h2>
+                    <p class="description">
+                        La propriété grid est une propriété abrégée en CSS qui permet de configurer un conteneur de
+                        grille et ses éléments enfants en une seule déclaration. Elle offre un moyen puissant et
+                        flexible de créer des mises en page complexes à deux dimensions. Avec la propriété grid, on peut
+                        définir à la fois les lignes et les colonnes de la grille, ainsi que les espaces entre elles.
+                    </p>
+                    <h3>Exemple d'utilisation</h3>
+                    <div class="use">
+                        <h4>Code</h4>
+                        <pre class="code">
+.grid{
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+    grid-template-areas:
+    'grid1 grid1 grid1'
+    'grid2 grid3 grid4'
+    'grid5 grid6 grid6';
+    height: 500px; 
+    width: 350px; 
+    border: 1px solid #561CD4;
+}
+                            
+.grid :first-child{
+    background-color: #fbc2eb;
+    grid-area: grid1;
+}
+.grid :nth-child(2){
+    background-color: #d8c2fb;
+    grid-area: grid2;
+}
+.grid :nth-child(3){
+    background-color: #fbc2c2;
+    grid-area: grid3;
+}
+.grid :nth-child(4){
+    background-color: #dafbc2;
+    grid-area: grid4;
+}
+.grid :nth-child(5){
+    background-color: #95a1e9;
+    grid-area: grid5;
+}
+.grid :last-child{
+    background-color: #82d3a0;
+    grid-area: grid6;
+}
+</pre>
+                        <h5>Résultat</h5>
+                        <div class="grid">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_grid_layout">MDN - Grid</a>
+                    </div>
                 </div>
 
             </div>
@@ -335,10 +482,7 @@ filter: blur(2px);
     height: 100px;
     width: 100px;
 }
-                            
-
-
-                    </pre>
+</pre>
                         <h5>Résultat</h5>
                         <div class="keyframe">
 
@@ -346,9 +490,6 @@ filter: blur(2px);
                         <h6>Source</h6>
                         <a href="https://developer.mozilla.org/fr/docs/Web/CSS/transform">MDN - transform</a>
                     </div>
-                </div>
-                <div class="fieldset">
-                    <h2>Animation</h2>
                 </div>
             </div>
         </section>
@@ -371,8 +512,32 @@ filter: blur(2px);
             </header>
             <div class="content">
                 <div class="fieldset">
-                    <h2>Section vide</h2>
-                    <p>Aucune porpiété présenter pour la lettre M</p>
+                    <h2>Mix-blend-mode</h2>
+                    <p>La propriété CSS mix-blend-mode détermine comment le contenu d’un élément se mélange avec le
+                        contenu de son élément parent et de son arrière-plan. Elle permet de créer des effets visuels
+                        intéressants en spécifiant comment les couleurs des éléments qui se chevauchent interagissent.
+                        Les valeurs possibles pour cette propriété incluent : normal, multiply, screen, overlay, darken,
+                        lighten, color-dodge, color-burn, hard-light, soft-light, difference, exclusion, hue,
+                        saturation, color, et luminosity. Il est important de noter que mix-blend-mode n’est pas encore
+                        pris en charge par tous les navigateurs.</p>
+                    <h3>Exemple d'utilisation</h3>
+                    <div class="use">
+                        <h4>Code</h4>
+                        <pre class="code">
+.borderimage {
+    border: 20px solid transparent;
+    padding: 15px;
+    border-image: url(/assets/img/bg_borderimage.jpg) 30 stretch;
+}
+                            
+                    </pre>
+                        <h5>Résultat</h5>
+                        <div class="mix-blend-mode">
+                            <p>Je suis du text blend a mon container parent</p>
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/mix-blend-mode">MDN - Mix-blend-mode</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -395,11 +560,40 @@ filter: blur(2px);
             </header>
             <div class="content">
                 <div class="fieldset">
-                    <h2>Section vide</h2>
-                    <p>Aucune porpiété présenter pour la lettre O</p>
-                </div>
+                    <h2>Overflow</h2>
+                    <p>La propriété CSS overflow détermine ce qui se passe quand le contenu d'un élément dépasse ses
+                        limites, c'est-à-dire quand il est trop grand pour son conteneur. Elle est utile pour gérer le
+                        débordement de contenu de différentes manières.
+                        ChatGPT
+                        La valeur par défaut visible fait que le contenu débordant est visible en dehors de l'élément
+                        hidden cache le contenu débordant et n'ajoute pas de barre de défilement scroll affiche toujours
+                        des barres de défilement même si le contenu ne déborde pas auto affiche des barres de défilement
+                        seulement si le contenu déborde
+                    </p>
 
-            </div>
+                    <h3>Exemple d'utilisation </h3>
+                    <div class="use">
+                        <h4>Code</h4>
+                        <pre class="code">
+.overflow {
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid black;
+}
+.overflow :first-child {
+    height: 300px;
+    width: auto;
+}
+</pre>
+                        <h5>Résultat</h5>
+                        <div class="overflow">
+                            <img src="./assets/img/overflow.jpg" alt="">
+                        </div>
+                        <h6>Source</h6>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/mix-blend-mode">MDN - Mix-blend-mode</a>
+                    </div>
+                </div>
         </section>
         <section id="p">
             <header class="container">
@@ -450,7 +644,7 @@ filter: blur(2px);
                     <div class="use">
                         <h3>Exemple d'utilisation</h3>
                         <h4>Code</h4>
-                        <pre class="code">
+<pre class="code">
 .selecteur :first-child {
     color: blue;
     font-size: 1rem;
@@ -459,7 +653,7 @@ filter: blur(2px);
     color: orange;
     font-size: 1.5rem;
     }
-                    </pre>
+</pre>
                         <h5>Résultat</h5>
                         <div class="selecteur">
                             <p>je suis une balise p le premier enfant de la balise div contenant la class selecteur</p>
@@ -648,7 +842,8 @@ background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 
                         </div>
                         <h6>Source</h6>
-                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/text-decoration">MDN - text-decoration</a>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/text-decoration">MDN -
+                            text-decoration</a>
                     </div>
                 </div>
             </div>
