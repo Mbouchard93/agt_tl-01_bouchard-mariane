@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="./assets/js/app.js" defer></script>
 </head>
-<!--16 fonctionnalité css3 dont xFilter et 6 forme géométrique fait avec transform qui compte pour une 
-fonctionnalité chacune >> s'inspirer de https://www.quackit.com/css/css3/#google_vignette -->
-
 <body>
     <header class="nav_default">
         <div class="titre">
@@ -91,10 +88,12 @@ fonctionnalité chacune >> s'inspirer de https://www.quackit.com/css/css3/#googl
 .animation_timing2 {
     width: 100px;
     height: 100px;
-    background: linear-gradient(to right, #561CD4, #7D3C98);
+    background:
+    linear-gradient(to right, #561CD4, #7D3C98);
+    animation-timing-function:
+    cubic-bezier(0.680, -0.550, 0.265, 1.550); 
     animation-name: bounce;
     animation-duration: 2s;
-    animation-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
     animation-iteration-count: infinite;
 }
 </pre>
@@ -295,10 +294,10 @@ filter: blur(2px);
                         <div class="filter">
                             <span>Filter 1</span>
                             <span>filter 2</span>
-                            <span>filter 3</span>
-                            <span>filter 4</span>
                             <img class="style filter1" src="./assets/img/filter.jpg" alt="visuelle du filter x">
                             <img class="style filter2" src="./assets/img/filter1.jpg" alt="">
+                            <span>filter 3</span>
+                            <span>filter 4</span>
                             <img class="style filter3" src="./assets/img/filter2.jpg" alt="">
                             <img class="style filter4" src="./assets/img/filter3.jpg" alt="">
                         </div>
@@ -524,13 +523,23 @@ filter: blur(2px);
                     <div class="use">
                         <h4>Code</h4>
                         <pre class="code">
-.borderimage {
-    border: 20px solid transparent;
-    padding: 15px;
-    border-image: url(/assets/img/bg_borderimage.jpg) 30 stretch;
+.mix-blend-mode {
+    position: relative;
+    height: 200px;
+    background:
+    url('/assets/img/mix-blend-mode.jpg')
+    center/cover no-repeat ;
 }
-                            
-                    </pre>
+.mix-blend-mode :first-child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.8rem;
+    color: whitesmoke;
+    mix-blend-mode:difference;
+}
+</pre>
                         <h5>Résultat</h5>
                         <div class="mix-blend-mode">
                             <p>Je suis du text blend a mon container parent</p>
@@ -591,7 +600,7 @@ filter: blur(2px);
                             <img src="./assets/img/overflow.jpg" alt="">
                         </div>
                         <h6>Source</h6>
-                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/mix-blend-mode">MDN - Mix-blend-mode</a>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/overflow">MDN - Overflow</a>
                     </div>
                 </div>
         </section>
@@ -734,14 +743,14 @@ border-top: 50px solid #e67e22;
                         <div class="transform">
                             <span>Carre</span>
                             <span>Rectangle</span>
-                            <span>Diamond</span>
                             <div class="shape square"></div>
                             <div class="shape rectangle"></div>
-                            <div class="shape diamond"></div>
+                            <span>Diamond</span>
                             <span>Triangle</span>
+                            <div class="shape diamond"></div>
+                            <div class="shape triangle"></div>
                             <span>Parallelogram</span>
                             <span>Hexagon</span>
-                            <div class="shape triangle"></div>
                             <div class="shape parallelogram"></div>
                             <div class="shape hexagon"></div>
                         </div>
@@ -799,7 +808,8 @@ p {
 }
 .transition2:hover {
     transform: rotate(180deg);
-background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    background-image: 
+    linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
                     </pre>
                         <h5>Résultat</h5>
@@ -831,7 +841,8 @@ background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
     font-size: 1.4rem;
 }
 .text-decoration :last-child{
-    text-decoration: line-through wavy blue;
+    text-decoration:
+    line-through wavy blue;
     font-size: 1.4rem;
 }
                     </pre>
