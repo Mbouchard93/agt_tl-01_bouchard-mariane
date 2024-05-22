@@ -2,9 +2,7 @@ const containers = document.querySelectorAll('.container');
 const content = document.querySelector('.content')
 const navLinks = document.querySelectorAll('nav a');
 const btnRetour = document.querySelector('.btn_retour');
-
-
-
+navDefault = document.querySelector('.nav_default')
 
 containers.forEach(container => {
     container.addEventListener('click', (e) => {
@@ -25,8 +23,6 @@ containers.forEach(container => {
     });
 });
 
-navDefault = document.querySelector('.nav_default')
-
 window.addEventListener('scroll', ()=> {
     if (scrollY < 100){
         navDefault.classList.replace('navScroll', 'nav_default'); 
@@ -40,11 +36,3 @@ window.addEventListener('scroll', ()=> {
 btnRetour.addEventListener('click', () => {
     window.scrollTo(0,0);
 })
-
-
-/**
- * une naviguation devra permettre à l'utilisateur de se promener de lettre à lettre. La naviguation devra rester 
- * présente lorsque l'tuilisateur défile dans le microsite et une bouton lui permettant de remonter vers le haut
- * de la page devrai être accessible. Lorsque l'utilisateur dépase la hauteur de votre header, celui-ci devra rétricir 
- * en hauteur tout en restant dans l'écran. 
- */

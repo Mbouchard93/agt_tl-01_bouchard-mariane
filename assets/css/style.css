@@ -21,8 +21,6 @@
             background: url(/assets/img/texture-bg-white.jpg) center/cover fixed;
         }
 
-
-        /* header  */ 
         .titre {
             display: flex;
             flex-direction: column;
@@ -39,9 +37,7 @@
             grid-template-rows: repeat(2, 1fr);
             grid-template-columns: repeat(13, 1fr);
             gap: .5rem;
-
         }
-
 
         li {
             list-style: none;
@@ -66,10 +62,6 @@
             padding: 2rem;
         }
 
-
-        /* scroll */
-
-
         .navScroll {
             display: flex;
             justify-content: space-between;
@@ -79,16 +71,12 @@
             background-color: #F7EDE2;
             padding: 0 1rem;
             z-index: 1;
-
         }
 
         .nav_default {
             position: fixed;
             width: 100%;
         }
-
-
-        /* container de contenue */
 
         main {
             padding-top: 180px;
@@ -105,7 +93,6 @@
             font-size: 2rem;
             cursor: pointer;
             transition: box-shadow 0.5s ease;
-
         }
 
         .content {
@@ -133,8 +120,7 @@
             cursor: pointer;
             &:hover, &:focus{
                 text-decoration: underline;
-                color:  #561CD4;                               
-                
+                color:  #561CD4;                                
             }
         }
         .container:hover, .container:focus {
@@ -142,7 +128,6 @@
             
         }
 
-        /* L'intérieur du contenue */
         .fieldset{
             border: none;
             padding: 2rem;
@@ -188,12 +173,6 @@
             padding: 2rem;
         }
 
-
-
-
-
-        /* exemple d'utilisation */
-        /*animation timing*/
         @keyframes rotateAndScale {
             0% { transform: rotate(0deg) scale(1); }
             50% { transform: rotate(180deg) scale(0.5); }
@@ -209,8 +188,6 @@
             animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
         }
-
-
 
         @keyframes bounce {
             0% { transform: scale(1,1) translateY(0); }
@@ -249,13 +226,11 @@
             box-shadow: 10px 10px 5px grey;
         }
 
-        /*border image*/
         .borderimage {
             border: 20px solid transparent;
             padding: 15px;
             border-image: url(/assets/img/bg_borderimage.jpg) 30 stretch;
         }
-        /* keyframe*/ 
 
         @keyframes colorchange {
             0%   {background-color: rgb(255, 81, 0);}
@@ -270,14 +245,12 @@
             width: 100px;
         }
 
-        /*columns*/
         .columns{
             column-count: 3;
             column-gap: 20px;
 
         }
 
-        /* filter */
         .filter{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -303,8 +276,6 @@
             filter: opacity(50%);
         }
 
-
-        /*overflow*/
         .overflow {
             width: 300px;
             height: 200px;
@@ -317,7 +288,6 @@
             width: auto;
         }
 
-        /* transform */ 
         .transform {
             display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -391,13 +361,11 @@
             border-top: 50px solid #e67e22;
         }
 
-        /*text-shadow*/
+
         .text-shadow :first-child{
             text-shadow: 4px 4px 2px #3498db;
             padding-bottom: .5rem;
         }
-
-        /*transition*/
 
         .transition1 {
             width: 100px;
@@ -441,7 +409,6 @@
         .transition2 :first-child:hover {
             transform: rotate(180deg);
         }
-        /*text-decoration*/
 
         .text-decoration :first-child {
             text-decoration: underline dotted red;
@@ -452,7 +419,6 @@
             font-size: 1.4rem;
         }
 
-        /*mix-blend-mode*/
         .mix-blend-mode {
             position: relative;
             height: 100px;
@@ -467,7 +433,6 @@
             color: whitesmoke;
             mix-blend-mode:difference;
         }
-        /*grid */
 
         .grid{
             display: grid;
@@ -524,7 +489,6 @@
             align-items: center;
         }
 
-        /* selecteur*/
         .selecteur :first-child {
             color: blue;
             font-size: 1rem;
@@ -534,7 +498,7 @@
                 font-size: 1.5rem;
                 }
 
-        /* boutton retour vers en haut*/
+
         .btn_retour{
             background-color:  #561CD4;
             color: #F7EDE2;
@@ -570,22 +534,16 @@
             padding: 0 2rem;
         }
 
-
-        /* tablette et ordinateur */
-
         @media screen and (min-width:768px) {
             :root{
                 font-size: .7rem;
             }
             .navScroll{
                 padding: 0 3rem;
-
-            
             }
             ul {
                 width: fit-content;
             }
-
             li {
                 font-size: 1.4rem;
                 background-color: #F7EDE2;
