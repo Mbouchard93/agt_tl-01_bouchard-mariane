@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="./assets/js/app.js" defer></script>
 </head>
+
 <body>
     <header class="nav_default">
         <div class="titre">
@@ -193,7 +194,7 @@ box-shadow: 10px 10px 5px grey;
 
                         </div>
                         <h6>Source</h6>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius">MDN - border radius</a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-image">MDN - border image</a>
                     </div>
                 </div>
             </div>
@@ -294,12 +295,16 @@ filter: blur(2px);
                         <div class="filter">
                             <span>Filter 1</span>
                             <span>filter 2</span>
-                            <img class="style filter1" src="./assets/img/filter.jpg" alt="visuelle du filter x">
-                            <img class="style filter2" src="./assets/img/filter1.jpg" alt="">
+                            <img class="style filter1" src="./assets/img/filter.jpg"
+                                alt="image d'un paysage dans la vue d'un téléphone, un filtre flou de 2px est appliquer pour démontrer l'utiliter de la valeur blur">
+                            <img class="style filter2" src="./assets/img/filter1.jpg"
+                                alt="image d'un paysage dans la vue d'un téléphone, un filtre brillant de 225% est appliquer pour démontrer l'utiliter de la valeur brightness">
                             <span>filter 3</span>
                             <span>filter 4</span>
-                            <img class="style filter3" src="./assets/img/filter2.jpg" alt="">
-                            <img class="style filter4" src="./assets/img/filter3.jpg" alt="">
+                            <img class="style filter3" src="./assets/img/filter2.jpg"
+                                alt="image d'un paysage dans la vue d'un téléphone, un filtre de contraste de 200% est appliquer pour démontrer l'utiliter de la valeur contrast">
+                            <img class="style filter4" src="./assets/img/filter3.jpg"
+                                alt="image d'un paysage dans la vue d'un téléphone, un filtre d'opacité de 25% est appliquer pour démontrer l'utiliter de la valeur opacity">
                         </div>
                         <h6>Source</h6>
                         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_filter_effects">MDN - Filter
@@ -463,9 +468,11 @@ filter: blur(2px);
             <div class="content">
                 <div class="fieldset">
                     <h2>Keyframe</h2>
-                    <p class="description"> Permet de créer des animations complexes. Par exemple, l’animation suivante
-                        fait changer la couleur de fond d’un élément de orange à rose, puis à vert en 4 secondes en
-                        boucle.
+                    <p class="description">
+                        ChatGPT
+                        La règle keyframes en CSS permet de définir des styles pour les points clés tout
+                        au long d'une séquence d'animation, contrôlant ainsi les étapes intermédiaires. Cela offre un
+                        contrôle plus précis sur les étapes intermédiaires de l'animation par rapport aux transitions.
                     <div class="use">
                         <h3>Exemple d'utilisation</h3>
                         <h4>Code</h4>
@@ -487,7 +494,7 @@ filter: blur(2px);
 
                         </div>
                         <h6>Source</h6>
-                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/transform">MDN - transform</a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">MDN - Keyframes</a>
                     </div>
                 </div>
             </div>
@@ -653,7 +660,7 @@ filter: blur(2px);
                     <div class="use">
                         <h3>Exemple d'utilisation</h3>
                         <h4>Code</h4>
-<pre class="code">
+                        <pre class="code">
 .selecteur :first-child {
     color: blue;
     font-size: 1rem;
